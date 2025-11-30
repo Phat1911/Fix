@@ -2,11 +2,13 @@
 #include <stdlib.h>
 #include <string.h>
 
+
 int ktraNto (int n) {
     if (n < 2) return 0;
     for (int i = 2; i * i <= n; i++) if (n % i == 0) return 0;
     return 1;
 }
+
 
 int main () {
     int n;
@@ -15,6 +17,11 @@ int main () {
     for (int i = 0; i < n; i++) {
         scanf("%s", &a[i]);
     }
+    printf("Mang A: ");
+    for (int i = 0; i < n; i++) {
+        printf("%s ", a[i]);
+    }
+    printf("\n");
     int sum = 0;
     printf("Cac so nguyen to: ");
     for (int i = 0; i < n; i++) {
@@ -35,3 +42,5 @@ int main () {
     printf("\nTong cac so nguyen to: %d", sum);
     return 0;
 }
+
+
